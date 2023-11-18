@@ -15,6 +15,7 @@
                 <h1 class="display-2">Count: <span id="counter">0</span></h1>
                 <button onclick="increaseCount()">Increase Count</button>
                 <button onclick="stopCount()">Stop Count</button>
+                <button onclick="resetCount()">Reset Count</button>
             </div>
         </div>
     </div>
@@ -50,7 +51,6 @@
         const stopCount = () => {
             clearInterval(myInterval);
         }
-
         var myInterval2;
 
         const decreaseCount = () => {
@@ -76,6 +76,12 @@
                     clearInterval(myInterval2);
         }
 
+
+        
+        const resetCount = () => {
+        let resetCount = 0
+        document.getElementById("counter").innerHTML = resetCount;
+        }
 
     </script>
 </body>
