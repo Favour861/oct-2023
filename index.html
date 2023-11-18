@@ -20,6 +20,15 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-8 mx-auto shadow" style="margin-top: 8%; height: 70vh">
+                <h1 class="display-2">Count: <span id="counter2">100</span></h1>
+                <button onclick="decreaseCount()">Decrease Count</button>
+                <button onclick="stopCount2()">Stop Count</button>
+            </div>
+        </div>
+    </div>
 
     <script>
         // SETTIMEOUT AND SETINTERVAL
@@ -42,14 +51,38 @@
         const stopCount = () => {
             clearInterval(myInterval);
         }
+        var myInterval2;
+
+        const decreaseCount = () => {
+
+            // setInterval(handler, timeout);
+
+            myInterval2 = setInterval(secondCountFunction, 100);
+        }
+
+        const secondCountFunction = () =>{
+            let initial= Number(document.getElementById("counter2").innerHTML);
+            let new2 = initial -1;
+            document.getElementById("counter2").innerHTML = new2;
+            if (new2 <= 20){
+                document.getElementById("counter2").style.color = "red" 
+            }
+            if (new2 === 0){
+                stopCount2()
+            }
+        }
+
+        const stopCount2 = () => {
+                    clearInterval(myInterval2);
+        }
+
+
         
         const resetCount = () => {
         let resetCount = 0
         document.getElementById("counter").innerHTML = resetCount;
         }
 
-           
-        
     </script>
 </body>
 </html>
