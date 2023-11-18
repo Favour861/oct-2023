@@ -55,25 +55,25 @@
 
         const decreaseCount = () => {
 
-// setInterval(handler, timeout);
+            // setInterval(handler, timeout);
 
-myInterval2 = setInterval(secondCountFunction, 100);
-}
+            myInterval2 = setInterval(secondCountFunction, 100);
+        }
 
-const secondCountFunction = () =>{
-    let initial= Number(document.getElementById("counter2").innerHTML);
-    let new2 = initial -1;
-    document.getElementById("counter2").innerHTML = new2;
-    if (new2 <= 20){
-        document.getElementById("counter2").style.color = "red" 
-    }
-    if (new2 === 0){
-        stopCount2()
-    }
-}
+        const secondCountFunction = () =>{
+            let initial= Number(document.getElementById("counter2").innerHTML);
+            let new2 = initial -1;
+            document.getElementById("counter2").innerHTML = new2;
+            if (new2 <= 20){
+                document.getElementById("counter2").style.color = "red" 
+            }
+            if (new2 === 0){
+                stopCount2()
+            }
+        }
 
-const stopCount2 = () => {
-            clearInterval(myInterval2);
+        const stopCount2 = () => {
+                    clearInterval(myInterval2);
         }
 
 
