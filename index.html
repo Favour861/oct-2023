@@ -13,9 +13,9 @@
         <div class="row">
             <div class="col-8 mx-auto shadow" style="margin-top: 8%; height: 70vh">
                 <h1 class="display-2">Count: <span id="counter">0</span></h1>
-                <button onclick="increaseCount()">Increase Count</button>
-                <button onclick="stopCount()">Stop Count</button>
-                <button onclick="resetCount()">Reset Count</button>
+                <button class="bg-success text-light" onclick="increaseCount()">Increase Count</button>
+                <button class="bg-danger text-light" onclick="stopCount()">Stop Count</button>
+                <button class="bg-dark text-light" onclick="resetCount()">Reset Count</button>
             </div>
         </div>
     </div>
@@ -40,13 +40,14 @@
         }
 
         const stopCount = () => {
-            clearInterval(myInterval);
+                clearInterval(myInterval);
         }
-        
+
         const resetCount = () => {
-        let resetCount = 0
-        document.getElementById("counter").innerHTML = resetCount;
-        }
+                clearInterval(myInterval)
+                let resetCount = 0
+                document.getElementById("counter").innerHTML = resetCount;
+         }
 
            
         
