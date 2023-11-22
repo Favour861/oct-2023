@@ -34,55 +34,37 @@
         // SETTIMEOUT AND SETINTERVAL
 
         var myInterval;
+        const count = document.getElementById('counter')
 
         const increaseCount = () => {
 
             // setInterval(handler, timeout);
 
-            myInterval = setInterval(countFunction, 10);
+            myInterval = setInterval(countFunction, 1000);
         }
 
         const countFunction = ()=>{
                 let initialCount = Number(document.getElementById("counter").innerHTML);
                 let newCount = initialCount + 1;
                 document.getElementById("counter").innerHTML = newCount;
+                // document.getElementById("counter").style.color = "blue";
+                if (newCount > 100 && newCount < 201) {
+                    document.getElementById("counter").innerHTML = newCount;
+                    document.getElementById("counter").style.color = "blue";
+                }else if (newCount > 200 && newCount < 301) {
+                    document.getElementById("counter").innerHTML = newCount;
+                    document.getElementById("counter").style.color = "red";
+                }else if (newCount > 300 && newCount < 401) {
+                    document.getElementById("counter").innerHTML = newCount;
+                    document.getElementById("counter").style.color = "green";
+                }
+                    
+                
         }
 
         const stopCount = () => {
             clearInterval(myInterval);
         }
-        var myInterval2;
-
-        const decreaseCount = () => {
-
-            // setInterval(handler, timeout);
-
-            myInterval2 = setInterval(secondCountFunction, 100);
-        }
-
-        const secondCountFunction = () =>{
-            let initial= Number(document.getElementById("counter2").innerHTML);
-            let new2 = initial -1;
-            document.getElementById("counter2").innerHTML = new2;
-            if (new2 <= 20){
-                document.getElementById("counter2").style.color = "red" 
-            }
-            if (new2 === 0){
-                stopCount2()
-            }
-        }
-
-        const stopCount2 = () => {
-                    clearInterval(myInterval2);
-        }
-
-
-        
-        const resetCount = () => {
-        let resetCount = 0
-        document.getElementById("counter").innerHTML = resetCount;
-        }
-
     </script>
 </body>
 </html>
