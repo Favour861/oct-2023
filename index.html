@@ -30,22 +30,26 @@
 
             // setInterval(handler, timeout);
 
-            myInterval = setInterval(countFunction, 100);
-            
-            if (counter > 50 && couiter < 101) {
-                document.getElementById("counter"). style.color = "green";
-            }
+            myInterval = setInterval(countFunction, 1000);
         }
 
         const countFunction = ()=>{
                 let initialCount = Number(document.getElementById("counter").innerHTML);
                 let newCount = initialCount + 1;
                 document.getElementById("counter").innerHTML = newCount;
-                // document.getElementById("counter").style.color = "red";
-                if (counter > 50 && counter < 101) {
+                // document.getElementById("counter").style.color = "blue";
+                if (newCount > 100 && newCount < 201) {
+                    document.getElementById("counter").innerHTML = newCount;
+                    document.getElementById("counter").style.color = "blue";
+                }else if (newCount > 200 && newCount < 301) {
                     document.getElementById("counter").innerHTML = newCount;
                     document.getElementById("counter").style.color = "red";
+                }else if (newCount > 300 && newCount < 401) {
+                    document.getElementById("counter").innerHTML = newCount;
+                    document.getElementById("counter").style.color = "green";
                 }
+                    
+                
         }
 
         const stopCount = () => {
@@ -53,10 +57,6 @@
         }
 
         // function changeColour() {
-            
-        //     // const newColour = (counter >= 50 && counter <= 100) ? 'blue';
-        //     // count.style.color = newColour;
-
         //     // if (counter >= 50 && counter <= 100) {
         //     //     newColour = 'green'                
         //     // }
