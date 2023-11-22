@@ -15,10 +15,20 @@
                 <h1 class="display-2">Count: <span id="counter">0</span></h1>
                 <button onclick="increaseCount()">Increase Count</button>
                 <button onclick="stopCount()">Stop Count</button>
+                <button onclick="resetCount()">Reset Count</button>
             </div>
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-8 mx-auto shadow" style="margin-top: 8%; height: 70vh">
+                <h1 class="display-2">Count: <span id="counter2">100</span></h1>
+                <button onclick="decreaseCount()">Decrease Count</button>
+                <button onclick="stopCount2()">Stop Count</button>
+            </div>
+        </div>
+    </div>
 
     <script>
         // SETTIMEOUT AND SETINTERVAL
@@ -55,18 +65,6 @@
         const stopCount = () => {
             clearInterval(myInterval);
         }
-
-        // function changeColour() {
-        //     // if (counter >= 50 && counter <= 100) {
-        //     //     newColour = 'green'                
-        //     // }
-        //     // if (counter > 50 && couiter < 101) {
-        //     //     document.getElementById("counter"). style.color = "green";
-        //     // }
-
-
-        // }
-
     </script>
 </body>
 </html>
